@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>{% if title %}{{ title }} | {% endif %}{{ SITENAME }}</title>
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
+
+    <style>
+        :root {
+            --main-color: {{ CUSTOM_COLOR }};
+        }
+    </style>
+</head>
+<body>
+    <header id="site-name">
+        <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+        <p>{{ SUBTITLE }}</p>
+    </header>
+
+    <nav>
+        <ul>
+            {% for page in pages %}
+            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+            aquiii
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>
+            &copy; {{ CURRENT_YEAR }}
+            <a href="{{ SITEURL }}">{{ SITENAME }}</a>.
+            <a class="minimalist-owl" href="https://github.com/carolinealtoss/minimalist-owl" target="_blank">MinimalistOwl</a>
+        </p>
+    </footer>
+
+    <!-- Botão "Voltar ao Topo" -->
+    <button id="btnTop" title="Voltar ao topo">▲</button>
+    <script src="{{ SITEURL }}/theme/js/script.js"></script>
+</body>
+</html>

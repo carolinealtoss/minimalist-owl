@@ -1,0 +1,187 @@
+body {
+    background-color: #dfdfdf;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+main {
+    margin: 20px;
+    padding-bottom: 50px;
+}
+
+article {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+footer {
+    background-color: #333;
+    color: #DADADB;
+    font-size: x-small;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+}
+
+footer a {
+    color: var(--main-color);
+}
+
+.minimalist-owl {
+    color: #DADADB;
+}
+
+#site-name{
+    text-decoration: none;
+    background-color: #333;
+    padding: 10px;
+    text-align: left;
+}
+
+#site-name a {
+    color: var(--main-color);
+}
+
+#site-name p {
+    font-family: 'Poppins', sans-serif;
+    margin-top: -20px;
+    font-size: small;
+    color: #DADADB;
+}
+
+/* Estilos para o layout das postagens */
+.post-box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #e0e0e0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-box h2{
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.post-box h2 a{
+    color: #444444;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #5e5e5e;
+    margin-bottom: 15px;
+}
+
+.author-name {
+    color: var(--main-color);
+    margin-right: 30px;
+}
+
+.article-header p {
+    font-size: 0.8rem;
+    color: #7e7e7e;
+}
+
+.article-header h1 {
+    font-size: xx-large;
+    color: #444444;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.1em;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+.content {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: #444444;
+    line-height: 1.2em;
+    padding: 5px;
+    word-wrap: break-word; /* Quebra o texto quando atingir a largura máxima */
+    overflow-wrap: break-word; /* Compatibilidade com navegadores mais novos */
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.content h2 {
+    line-height: 1.1em;
+}
+
+.related-posts h2{
+    font-family: 'Poppins', sans-serif;
+    color: #5e5e5e;
+    margin-top: 30px;
+    font-size: large;
+}
+
+/* Estilos para o botão de voltar ao topo */
+#btnTop {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fixo na tela */
+    bottom: 50px; /* Distância da parte inferior */
+    right: 15px; /* Distância da parte direita */
+    z-index: 99; /* Certifica-se de que o botão fique acima de outros elementos */
+    font-size: 25px;
+    background-color:#333; /* Cor de fundo */
+    color: var(--main-color);; /* Cor do texto */
+    border: none; /* Remove bordas */
+    padding: 10px;
+    border-radius: 50%; /* Torna o botão circular */
+    cursor: pointer; /* Cursor de clique */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao botão */
+    opacity: 0.5;
+}
+
+#btnTop:hover {
+    background-color: #4d4d4d; /* Cor mais escura ao passar o mouse */
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: white;
+    background-color: #007acc;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.pagination a:hover {
+    background-color: #005fa3;
+}
+
+.pagination .previous {
+    margin-right: 10px;
+}
+
+.pagination .next {
+    margin-left: 10px;
+}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="post">
+    <header class="article-header">
+        <p>
+            <time datetime="{{ article.date }}">{{ article.date.strftime('%d/%m/%Y') }}</time>
+            {% if article.author %} • {{ article.author }}{% endif %}
+        </p>
+        <h1>{{ article.title }}</h1>
+    </header>
+
+    <section class="content">
+        {{ article.content }}
+    </section>
+</article>
+{% endblock %}

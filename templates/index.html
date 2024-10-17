@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Listando as postagens do blog -->
+    <section class="post-list">
+        {% for article in articles %}
+        <div class="post-box">
+            <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+            <div class="post-meta">
+                <span>Por </span><span class="author-name">{{ article.author }}</span>
+                <span class="meta-date">{{ article.date.strftime('%d de %B de %Y') }}</span>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+
+    <!-- Navegação de paginação -->
+    <nav class="pagination">
+        {% if previous_page %}
+            <a href="{{ SITEURL }}/{{ previous_page }}" class="previous">Página Anterior</a>
+        {% endif %}
+
+        {% if next_page %}
+            <a href="{{ SITEURL }}/{{ next_page }}" class="next">Próxima Página</a>
+        {% endif %}
+    </nav>
+{% endblock %}
