@@ -21,13 +21,13 @@
 
    ```bash
    cd caminho/para/seu/projeto/pelican
-   git clone https://github.com/usuario/minimalistowl.git themes/minimalistowl
+   git clone https://github.com/usuario/minimalist-owl.git themes/minimalist-owl
    ```
 
 2. No arquivo `pelicanconf.py`, defina o tema como **MinimalistOwl**:
 
    ```python
-   THEME = 'themes/minimalistowl'
+   THEME = 'themes/minimalist-owl'
    ```
 
 ## Configurações Opcionais
@@ -72,7 +72,7 @@ AUTHOR = 'Caroline Altos'
 SITENAME = 'Caroline Altos'
 SITEURL = ''
 
-THEME = 'themes/minimalistowl'
+THEME = 'themes/minimalist-owl'
 
 CUSTOM_COLOR = "#D98695"
 CURRENT_YEAR = datetime.now().year
@@ -80,7 +80,7 @@ SUBTITLE = 'Desenvolvedora de Software'
 
 PATH = 'content'
 TIMEZONE = 'America/Sao_Paulo'
-DEFAULT_LANG = 'pt'
+DEFAULT_LANG = 'en'
 
 DEFAULT_PAGINATION = 10
 ```
