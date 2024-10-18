@@ -17,11 +17,11 @@
     <!-- Navegação de paginação -->
     <nav class="pagination">
         {% if previous_page %}
-            <a href="{{ SITEURL }}/{{ previous_page }}" class="previous">Página Anterior</a>
+            <a href="{{ SITEURL }}/{{ previous_page.url }}" class="previous">Página Anterior</a>
         {% endif %}
 
         {% if next_page %}
-            <a href="{{ SITEURL }}/{{ next_page }}" class="next">Próxima Página</a>
+            <a href="{{ SITEURL }}/{{ next_page.url }}" class="next">Próxima Página</a>
         {% endif %}
     </nav>
 {% endblock %}

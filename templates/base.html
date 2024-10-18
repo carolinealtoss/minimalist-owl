@@ -16,8 +16,10 @@
 </head>
 <body>
     <header id="site-name">
-        <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
-        <p>{{ SUBTITLE }}</p>
+        <div class="header-container">
+            <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+            <p>{{ SUBTITLE }}</p>
+        </div>
     </header>
 
     <nav>
@@ -34,11 +36,13 @@
     </main>
 
     <footer>
-        <p>
-            &copy; {{ CURRENT_YEAR }}
-            <a href="{{ SITEURL }}">{{ SITENAME }}</a>.
-            <a class="minimalist-owl" href="https://github.com/carolinealtoss/minimalist-owl" target="_blank">MinimalistOwl</a>
-        </p>
+        <div class="footer-container">
+            <p>
+                &copy; {{ CURRENT_YEAR }}
+                <a href="{{ SITEURL }}">{{ SITENAME }}</a>.
+                <a class="minimalist-owl" href="https://github.com/carolinealtoss/minimalist-owl" target="_blank">MinimalistOwl</a>
+            </p>
+        </div>
     </footer>
 
     <!-- Botão "Voltar ao Topo" -->
