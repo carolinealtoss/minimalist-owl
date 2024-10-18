@@ -1,27 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <!-- Listando as postagens do blog -->
-    <section class="post-list">
-        {% for article in articles %}
-        <div class="post-box">
-            <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
-            <div class="post-meta">
-                <span>Por </span><span class="author-name">{{ article.author }}</span>
-                <span class="meta-date">{{ article.date.strftime('%d de %B de %Y') }}</span>
+    <!-- Verifique se a variável "pagination" está disponível -->
+    {% if articles %}
+        <!-- Listando as postagens do blog com paginação -->
+        <section class="post-list">
+            {% for article in articles_page.object_list %}
+            <div class="post-box">
+                <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+                <div class="post-meta">
+                    <span>Por </span><span class="author-name">{{ article.author }}</span>
+                    <span class="meta-date">{{ article.date.strftime('%d de %B de %Y') }}</span>
+                </div>
             </div>
-        </div>
-        {% endfor %}
-    </section>
+            {% endfor %}
+        </section>
 
-    <!-- Navegação de paginação -->
-    <nav class="pagination">
-        {% if previous_page %}
-            <a href="{{ SITEURL }}/{{ previous_page.url }}" class="previous">Página Anterior</a>
+        <!-- Navegação de paginação -->
+        {% if articles_paginator.num_pages > 1 %}
+            <section class="pagination">
+                <nav class="pagination">
+                    {% if articles_page.has_previous() %}
+                        <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" class="previous"><< Página Anterior</a>
+                    {% endif %}
+                    {% if articles_page.has_next() %}
+                        <a href="{{ SITEURL }}/{{ articles_next_page.url }}" class="next">Próxima Página >></a>
+                    {% endif %}
+                </nav>
+            </section>
         {% endif %}
-
-        {% if next_page %}
-            <a href="{{ SITEURL }}/{{ next_page.url }}" class="next">Próxima Página</a>
-        {% endif %}
-    </nav>
+    {% else %}
+        <p>Não há artigos disponíveis.</p>
+    {% endif %}
 {% endblock %}
