@@ -25,7 +25,7 @@ header, footer {
 }
 
 /* Centralizando conteúdo em contêineres */
-.header-container, .footer-container, .post-list, .post {
+.header-container, .footer-container, .post-list, .pagination, .post {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
@@ -66,6 +66,10 @@ article {
 
 footer a {
     color: var(--accent-color);
+}
+
+.minimalist-owl {
+    color: var(--text-light);
 }
 
 #site-name {
