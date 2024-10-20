@@ -35,6 +35,11 @@ header, footer {
     padding: 0 20px;
 }
 
+.content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 .header-container {
     display: flex;
     justify-content: space-between; /* Coloca "site-name" à esquerda e "site-pages" à direita */
@@ -55,7 +60,7 @@ header, footer {
     padding: 0;
 }
 
-.post-list {
+.post-list, main p {
     margin-top: 30px;
 }
 
@@ -66,7 +71,7 @@ main {
 
 /* Footer específico */
 footer {
-    font-size: x-small;
+    font-size: small;
     text-align: center;
     padding: 5px;
 }
@@ -253,4 +258,9 @@ footer a {
 
 .pagination .next {
     margin-left: 10px;
+}
+
+.post, .page {
+    padding-left: 30px;
+    padding-right: 30px;
 }
