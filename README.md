@@ -3,6 +3,12 @@
 
 **MinimalistOwl** é um tema minimalista desenvolvido para o gerador de sites estáticos **Pelican**. Ele oferece um layout limpo e moderno, com foco em tipografia e simplicidade, ideal para blogs de desenvolvimento, portfólios, ou qualquer site que deseje uma estética organizada e sem distrações.
 
+![MinimalistOwl](minimalist-owl_index.png)
+
+## Exemplo post
+
+![MinimalistOwl](minimalist-owl_post.png)
+
 ## Características
 
 - Design responsivo e minimalista.
