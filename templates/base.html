@@ -17,19 +17,21 @@
 <body>
     <header id="site-name">
         <div class="header-container">
-            <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
-            <p>{{ SUBTITLE }}</p>
+            <div class="site-name">
+                <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+                <p>{{ SUBTITLE }}</p>
+            </div>
+
+            <!-- Menu de navegação -->
+            <nav class="site-pages">
+                <ul>
+                    {% for page in pages %}
+                    <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
         </div>
     </header>
-
-    <nav>
-        <ul>
-            {% for page in pages %}
-            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-            aquiii
-            {% endfor %}
-        </ul>
-    </nav>
 
     <main>
         {% block content %}{% endblock %}
